@@ -1,6 +1,7 @@
 package model;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -34,6 +35,10 @@ public class Project{
 	
 	public String getClientName(){
 		return clientName;
+	}
+
+	public GregorianCalendar getStartDate(){
+		return (GregorianCalendar) initialDate;
 	}
 
 	public Calendar getInitialDate(){

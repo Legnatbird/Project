@@ -31,27 +31,31 @@ public class Controller {
 			projects[projects.length] = new Project(name, clientName, startDate, endDate, budget);
 			return true;
 		}
-
 		return false;
 	}
 
 	//Incomplete
 	// Date class also has their own before() and after() method
-	public String searchProjectsAfterDate() {
-
+	public String searchProjectsAfterDate(GregorianCalendar date) {
 		String msg = "";
-
+		for (int i = 0; i < projects.length; i++) {
+			if (projects[i].getStartDate().after(date)) {
+				msg = projects[i].toString();
+			}
+		}
 		return msg;
 
 	}
 	
 	//Incomplete
 	// Date class also has their own before() and after() method
-	public String searchProjectsBeforeDate() {
-
+	public String searchProjectsBeforeDate(GregorianCalendar date) {
 		String msg = "";
-
+		for (int i = 0; i < projects.length; i++) {
+			if (projects[i].getStartDate().before(date)) {
+				msg = projects[i].toString();
+			}
+		}
 		return msg;
-
 	}
 }
