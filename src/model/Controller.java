@@ -20,7 +20,6 @@ public class Controller {
 		return new GregorianCalendar(year, month, day);
 	}
 	
-	//Incomplete
 	public boolean RegisterProject() {
 		if (projects.length < 10) {
 			String name = console.readLine("Enter project name: ");
@@ -34,8 +33,6 @@ public class Controller {
 		return false;
 	}
 
-	//Incomplete
-	// Date class also has their own before() and after() method
 	public String searchProjectsAfterDate(GregorianCalendar date) {
 		String msg = "";
 		for (int i = 0; i < projects.length; i++) {
@@ -47,8 +44,6 @@ public class Controller {
 
 	}
 	
-	//Incomplete
-	// Date class also has their own before() and after() method
 	public String searchProjectsBeforeDate(GregorianCalendar date) {
 		String msg = "";
 		for (int i = 0; i < projects.length; i++) {
