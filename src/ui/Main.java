@@ -6,7 +6,8 @@ import model.Controller;
 
 public class Main {
 	/*
-	 * This class is the main class of the program. It is in charge of the interaction with the user.
+	 * This class is the main class of the program. It is in charge of the
+	 * interaction with the user.
 	 */
 	private Scanner reader;
 	GregorianCalendar search;
@@ -32,7 +33,8 @@ public class Main {
 	}
 
 	/*
-	 * This method is in charge of showing the menu and calling the methods of the controller class
+	 * This method is in charge of showing the menu and calling the methods of the
+	 * controller class
 	 */
 	public void menu() {
 		int option = 0;
@@ -46,25 +48,25 @@ public class Main {
 			option = reader.nextInt();
 
 			switch (option) {
-			case 1:
-				controller.RegisterProject();
-				break;
-			case 2:
-				System.out.println("Enter the date");
-				search = controller.generateDate();
-				controller.searchProjectsAfterDate(search);
-				break;
-			case 3:
-				System.out.println("Enter the date");
-				search = controller.generateDate();
-				controller.searchProjectsBeforeDate(search);
-				break;
-			case 4:
-				System.out.println("Bye");
-				break;
-			default:
-				System.out.println("Invalid option");
-				break;
+				case 1:
+					controller.RegisterProject();
+					break;
+				case 2:
+					System.out.println("Enter the date");
+					search = controller.generateDate();
+					controller.searchProjectsAfterDate(search);
+					break;
+				case 3:
+					System.out.println("Enter the date");
+					search = controller.generateDate();
+					controller.searchProjectsBeforeDate(search);
+					break;
+				case 4:
+					System.out.println("Bye");
+					break;
+				default:
+					System.out.println("Invalid option");
+					break;
 			}
 
 		} while (option != 4);

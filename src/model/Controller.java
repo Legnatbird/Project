@@ -18,8 +18,10 @@ public class Controller {
 	public Controller() {
 		projects = new Project[10];
 	}
+
 	/*
 	 * This method is in charge of generating a date
+	 * 
 	 * @return GregorianCalendar
 	 */
 	public GregorianCalendar generateDate() {
@@ -29,6 +31,7 @@ public class Controller {
 
 		return new GregorianCalendar(year, month, day);
 	}
+
 	/*
 	 * This method is in charge of registering a project
 	 */
@@ -45,26 +48,30 @@ public class Controller {
 			projectCounter++;
 		}
 	}
+
 	/*
 	 * This method is in charge of searching projects after a date
+	 * 
 	 * @param date
 	 */
 	public void searchProjectsAfterDate(GregorianCalendar date) {
 		for (int i = 0; i < projects.length; i++) {
 			if ((projects[i] != null) && (projects[i].getStartDate().after(date))) {
-					System.out.println("Project found" + projects[i].getName());
-				}
+				System.out.println("Project found" + projects[i].getName());
+			}
 		}
 	}
+
 	/*
 	 * This method is in charge of searching projects before a date
+	 * 
 	 * @param date
 	 */
 	public void searchProjectsBeforeDate(GregorianCalendar date) {
 		for (int i = 0; i < projects.length; i++) {
 			if ((projects[i] != null) && (projects[i].getStartDate().before(date))) {
-					System.out.println("Project found" + projects[i].getName());
-				}
+				System.out.println("Project found" + projects[i].getName());
+			}
 		}
 	}
 }
